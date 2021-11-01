@@ -8,7 +8,7 @@ void setup(){
    mika[i] = new Particle();
 }
 void draw(){
-  background(0);
+  background(255);
    frameRate(30);
 
   for(int i = 0; i < mika.length; i++){
@@ -32,8 +32,13 @@ class Particle{
   }
   void show(){
   fill(myColor);
-  noStroke();
-  ellipse((float)myX,(float)myY,10,10);
+  ellipse((float)myX,(float)myY,15,15);
+  ellipse((float)myX,(float)myY,15,15);
+  ellipse((float)myX,(float)myY,15,15);
+  ellipse((float)myX,(float)myY,15,15);
+  ellipse((float)myX,(float)myY,15,15);
+  fill(#FFFF66);
+  ellipse((float)myX,(float)myY,10,10); //make flowers
   }
 }
 
@@ -47,6 +52,6 @@ class OddballParticle extends Particle{ //inherits from Particle
     myY = myY + (Math.random()*10)-5;
   }
   void show(){
-    rect((int)myX,(int)myY,50,50);
+    rect((int)myX,(int)myY,50,50); //make bees
   }
 }
