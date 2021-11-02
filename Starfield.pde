@@ -1,7 +1,7 @@
 Particle mika[];
 void setup(){
   size(500,500);
-  mika = new Particle[1000];
+  mika = new Particle[500];
   for(int i = 0; i < mika.length; i++)
   mika[i]  = new OddballParticle();
   for(int i = 5; i < mika.length; i++)
@@ -32,13 +32,13 @@ class Particle{
   }
   void show(){
   fill(myColor);
-  ellipse((float)myX,(float)myY,15,15);
-  ellipse((float)myX,(float)myY,15,15);
-  ellipse((float)myX,(float)myY,15,15);
-  ellipse((float)myX,(float)myY,15,15);
-  ellipse((float)myX,(float)myY,15,15);
+  ellipse((float)myX+4,(float)myY+6,15,15);
+  ellipse((float)myX-4,(float)myY-2,15,15);
+  ellipse((float)myX-4,(float)myY+5,15,15); //right bottom
+  ellipse((float)myX+4,(float)myY-2,15,15);
+  //ellipse((float)myX,(float)myY-5,15,15);
   fill(#FFFF66);
-  ellipse((float)myX,(float)myY,10,10); //make flowers
+  ellipse((float)myX,(float)myY,9,9); //make flowers
   }
 }
 
