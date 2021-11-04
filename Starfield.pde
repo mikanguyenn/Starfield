@@ -8,7 +8,7 @@ void setup(){
    mika[i] = new Particle();
 }
 void draw(){
-  background(255);
+  background(173,216,230);
    frameRate(30);
 
   for(int i = 0; i < mika.length; i++){
@@ -32,13 +32,14 @@ class Particle{
   }
   void show(){
   fill(myColor);
-  ellipse((float)myX+4,(float)myY+6,15,15);
-  ellipse((float)myX-4,(float)myY-2,15,15);
-  ellipse((float)myX-4,(float)myY+5,15,15); //right bottom
-  ellipse((float)myX+4,(float)myY-2,15,15);
-  //ellipse((float)myX,(float)myY-5,15,15);
+  //noStroke();
+  ellipse((float)myX+5,(float)myY-1,17,15);
+  ellipse((float)myX+5,(float)myY+6,15,13);
+  ellipse((float)myX-5,(float)myY+6,14,14);
+  ellipse((float)myX-5,(float)myY-1,15,15);
+  ellipse((float)myX,(float)myY-5,14,14);
   fill(#FFFF66);
-  ellipse((float)myX,(float)myY,9,9); //make flowers
+  ellipse((float)myX,(float)myY+1,9,9); //make flowers
   }
 }
 
@@ -52,6 +53,11 @@ class OddballParticle extends Particle{ //inherits from Particle
     myY = myY + (Math.random()*10)-5;
   }
   void show(){
-    rect((int)myX,(int)myY,50,50); //make bees
+   //make birds
+    fill(#FFFF66);
+   triangle((int)myX-25,(int)myY-8,(int)myX-35,(int)myY,(int)myX-25,(int)myY+8);
+   ellipse((int)myX,(int)myY,50,50);
+   fill(0);
+   ellipse((int)myX-15,(int)myY-7,5,10);
   }
 }
