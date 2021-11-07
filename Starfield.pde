@@ -1,7 +1,7 @@
 Particle mika[];
 void setup(){
   size(500,500);
-  mika = new Particle[500];
+  mika = new Particle[400];
   for(int i = 0; i < mika.length; i++)
   mika[i]  = new OddballParticle();
   for(int i = 5; i < mika.length; i++)
@@ -10,12 +10,15 @@ void setup(){
 void draw(){
   background(173,216,230);
    frameRate(30);
-
   for(int i = 0; i < mika.length; i++){
     mika[i].move();
     mika[i].show();
-  }
+ }
 }
+ void mousePressed(){
+   //redraw();
+ }
+ 
 class Particle{
   double myX, myY, mySpeed, myAngle;
   int myColor;
@@ -54,10 +57,12 @@ class OddballParticle extends Particle{ //inherits from Particle
   }
   void show(){
    //make birds
-    fill(#FFFF66);
-   triangle((int)myX-25,(int)myY-8,(int)myX-35,(int)myY,(int)myX-25,(int)myY+8);
-   ellipse((int)myX,(int)myY,50,50);
+   fill(165,42,42);
+   triangle((float)myX-25,(float)myY-7,(float)myX-35,(float)myY,(float)myX-25,(float)myY+7);
+   fill(#FFFF66);
+   ellipse((float)myX,(float)myY,50,50);
+   arc((int)myX+8,(int)myY+2, 20, 20, 0, PI+QUARTER_PI, CHORD);
    fill(0);
-   ellipse((int)myX-15,(int)myY-7,5,10);
+   ellipse((float)myX-15,(float)myY-7,5,10);
   }
 }
