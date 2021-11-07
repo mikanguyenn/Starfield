@@ -60,9 +60,9 @@ class OddballParticle extends Particle{ //inherits from Particle
    triangle((int)myX-25,(int)myY-7,(int)myX-35,(int)myY,(int)myX-25,(int)myY+7);
    fill(#FFFF66);
    ellipse((int)myX,(int)myY,50,50);
-   arc((int)myX+8,(int)myY+2, 20, 20, 0, 1.25*PI);
-   arc((int)myX+4,(int)myY+5, 10, 10, 0, 5*PI/4);
-   arc((int)myX+12,(int)myY+5, 10, 10, 0, 5*PI/4);
+   arc((int)myX+8,(int)myY+2, 20, 20, 0, 5*PI/4);
+   arc((int)myX+8,(int)myY+5, 10, 10, 0, 5*PI/4);
+   line((int)myX,(int)myY-6,(int)myX+18,(int)myY+2);
    fill(0);
    ellipse((int)myX-15,(int)myY-7,5,10);
   }
