@@ -13,9 +13,11 @@ void draw(){
   for(int i = 0; i < mika.length; i++){
     mika[i].move();
     mika[i].show();
- }
+  }
 }
- 
+ void mousePressed(){
+  redraw();
+ }
 class Particle{
   double myX, myY, mySpeed, myAngle;
   int myColor;
