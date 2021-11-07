@@ -61,6 +61,8 @@ class OddballParticle extends Particle{ //inherits from Particle
    fill(#FFFF66);
    ellipse((int)myX,(int)myY,50,50);
    arc((int)myX+8,(int)myY+2, 20, 20, 0, 1.25*PI);
+   arc((int)myX+4,(int)myY+5, 10, 10, 0, 5*PI/4);
+   arc((int)myX+12,(int)myY+5, 10, 10, 0, 5*PI/4);
    fill(0);
    ellipse((int)myX-15,(int)myY-7,5,10);
   }
