@@ -16,7 +16,7 @@ void draw(){
  }
 }
  void mousePressed(){
-   //redraw();
+   redraw();
  }
  
 class Particle{
