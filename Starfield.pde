@@ -55,11 +55,11 @@ class OddballParticle extends Particle{ //inherits from Particle
   void show(){
    //make birds
    fill(165,42,42);
-   triangle((float)myX-25,(float)myY-7,(float)myX-35,(float)myY,(float)myX-25,(float)myY+7);
+   triangle((int)myX-25,(int)myY-7,(int)myX-35,(int)myY,(int)myX-25,(int)myY+7);
    fill(#FFFF66);
-   ellipse((float)myX,(float)myY,50,50);
+   ellipse((int)myX,(int)myY,50,50);
    arc((int)myX+8,(int)myY+2, 20, 20, 0, PI+QUARTER_PI, CHORD);
    fill(0);
-   ellipse((float)myX-15,(float)myY-7,5,10);
+   ellipse((int)myX-15,(int)myY-7,5,10);
   }
 }
