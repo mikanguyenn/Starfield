@@ -15,9 +15,6 @@ void draw(){
     mika[i].show();
  }
 }
- //void mousePressed(){
-   //redraw();
- //}
  
 class Particle{
   double myX, myY, mySpeed, myAngle;
